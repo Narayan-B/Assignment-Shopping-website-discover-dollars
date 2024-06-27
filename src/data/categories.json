@@ -1,0 +1,150 @@
+[
+    {
+      "name": "Fashion",
+      "subcategories": [
+        {
+          "name": "Men",
+          "subcategories": [
+            { "name": "Ethnic Wear" },
+            { "name": "Casual Wear" },
+            { "name": "Formal Wear" },
+            { "name": "Sportswear" }
+          ]
+        },
+        {
+          "name": "Women",
+          "subcategories": [
+            { "name": "Ethnic Wear" },
+            { "name": "Western Wear" },
+            { "name": "Formal Wear" },
+            { "name": "Sportswear" }
+          ]
+        },
+        {
+          "name": "Kids",
+          "subcategories": [
+            { "name": "Boys" },
+            { "name": "Girls" },
+            { "name": "Infants" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "subcategories": [
+        {
+          "name": "Mobiles",
+          "subcategories": [
+            { "name": "Smartphones" },
+            { "name": "Feature Phones" },
+            { "name": "Accessories" }
+          ]
+        },
+        {
+          "name": "Computers",
+          "subcategories": [
+            { "name": "Laptops" },
+            { "name": "Desktops" },
+            { "name": "Components" }
+          ]
+        },
+        {
+          "name": "Home Appliances",
+          "subcategories": [
+            { "name": "Refrigerators" },
+            { "name": "Washing Machines" },
+            { "name": "Kitchen Appliances" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Home & Furniture",
+      "subcategories": [
+        {
+          "name": "Living Room",
+          "subcategories": [
+            { "name": "Sofas" },
+            { "name": "Chairs" },
+            { "name": "Tables" }
+          ]
+        },
+        {
+          "name": "Bedroom",
+          "subcategories": [
+            { "name": "Beds" },
+            { "name": "Wardrobes" },
+            { "name": "Dressers" }
+          ]
+        },
+        {
+          "name": "Kitchen & Dining",
+          "subcategories": [
+            { "name": "Dining Tables" },
+            { "name": "Cabinets" },
+            { "name": "Cookware" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sports & Fitness",
+      "subcategories": [
+        {
+          "name": "Outdoor",
+          "subcategories": [
+            { "name": "Camping" },
+            { "name": "Hiking" },
+            { "name": "Cycling" }
+          ]
+        },
+        {
+          "name": "Indoor",
+          "subcategories": [
+            { "name": "Yoga" },
+            { "name": "Gym Equipment" },
+            { "name": "Cardio Equipment" }
+          ]
+        },
+        {
+          "name": "Accessories",
+          "subcategories": [
+            { "name": "Fitness Trackers" },
+            { "name": "Bags" },
+            { "name": "Water Bottles" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beauty & Health",
+      "subcategories": [
+        {
+          "name": "Beauty",
+          "subcategories": [
+            { "name": "Makeup" },
+            { "name": "Skincare" },
+            { "name": "Hair Care" }
+          ]
+        },
+        {
+          "name": "Health",
+          "subcategories": [
+            { "name": "Supplements" },
+            { "name": "Medical Supplies" },
+            { "name": "Personal Care" }
+          ]
+        },
+        {
+          "name": "Grooming",
+          "subcategories": [
+            { "name": "Shaving" },
+            { "name": "Fragrances" },
+            { "name": "Oral Care" }
+          ]
+        }
+      ]
+    }
+  ]
+  
