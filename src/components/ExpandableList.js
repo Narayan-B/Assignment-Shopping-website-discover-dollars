@@ -7,7 +7,7 @@ import {
   Devices as DevicesIcon,
   Home as HomeIcon,
   SportsSoccer as SportsIcon,
-  Spa as SpaIcon,
+  Brush as MakeupKitIcon
 } from '@mui/icons-material'; // Import icons for each category
 
 const ExpandableList = ({ categories }) => {
@@ -32,7 +32,7 @@ const ExpandableList = ({ categories }) => {
       case 'Sports & Fitness':
         return <SportsIcon />;
       case 'Beauty & Health':
-        return <SpaIcon />;
+        return <MakeupKitIcon />;
       default:
         return <CategoryIcon />;
     }
