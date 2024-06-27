@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { List, ListItem, ListItemText, Collapse, ListItemIcon, Box } from '@mui/material';
-import { ExpandLess, ExpandMore, Category } from '@mui/icons-material';
+import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import {
+  Category as CategoryIcon,
+  Face as FaceIcon,
+  Devices as DevicesIcon,
+  Home as HomeIcon,
+  SportsSoccer as SportsIcon,
+  Spa as SpaIcon,
+} from '@mui/icons-material'; // Import icons for each category
 
 const ExpandableList = ({ categories }) => {
   const [open, setOpen] = useState({});
@@ -11,6 +19,23 @@ const ExpandableList = ({ categories }) => {
 
   const handleCloseAll = () => {
     setOpen({});
+  };
+
+  const getCategoryIcon = (categoryName) => {
+    switch (categoryName) {
+      case 'Fashion':
+        return <FaceIcon />;
+      case 'Electronics':
+        return <DevicesIcon />;
+      case 'Home & Furniture':
+        return <HomeIcon />;
+      case 'Sports & Fitness':
+        return <SportsIcon />;
+      case 'Beauty & Health':
+        return <SpaIcon />;
+      default:
+        return <CategoryIcon />;
+    }
   };
 
   const renderSubcategories = (subcategories, level = 0) => {
@@ -62,7 +87,7 @@ const ExpandableList = ({ categories }) => {
               sx={{ minWidth: '150px' }} // Adjust min width for each item
             >
               <ListItemIcon>
-                <Category />
+                {getCategoryIcon(category.name)}
               </ListItemIcon>
               <ListItemText primary={category.name} />
               {category.subcategories ? (open[category.name] ? <ExpandLess /> : <ExpandMore />) : null}
