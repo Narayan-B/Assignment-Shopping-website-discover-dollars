@@ -39,21 +39,27 @@ const ExpandableList = ({ categories }) => {
     <Box
       onMouseLeave={handleCloseAll} // Close all categories on mouse leave
       sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: '20px', // Adjust the space between items
         position: 'fixed',
-        top: 20,
-        right: 0,
-        width: '300px',
+        top: 70,
+        left: 20, // Adjust left positioning
+        maxWidth: 'calc(100vw - 40px)', // Adjust the maximum width as needed
         zIndex: 1000,
         backgroundColor: '#fff',
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+        overflowX: 'auto', // Enable horizontal scrolling if needed
       }}
     >
-      <List component="nav">
+      <List component="nav" sx={{ display: 'flex', flexDirection: 'row', gap: '20px', flexWrap: 'wrap', padding: 0 }}>
         {categories.map((category) => (
           <div key={category.name}>
             <ListItem
               button
               onMouseEnter={() => handleToggle(category.name)}
+              sx={{ minWidth: '150px' }} // Adjust min width for each item
             >
               <ListItemIcon>
                 <Category />

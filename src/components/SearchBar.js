@@ -11,16 +11,21 @@ const SearchBar = ({ categories, onSearch }) => {
   const allCategories = flattenCategories(categories);
 
   const handleSearch = (event, value) => {
-    if (value) {
-      const searchCategory = value.split(' -> ').pop();
-      onSearch(searchCategory);
-    } else {
-      onSearch('');
+    let searchCategory = '';
+
+    if (value && typeof value === 'string') {
+      searchCategory = value.split(' -> ').pop().toLowerCase();
     }
+
+    const filteredOptions = allCategories.filter(option =>
+      option.toLowerCase().includes(searchCategory)
+    );
+
+    onSearch(filteredOptions);
   };
 
   return (
-    <Box mt={2} ml={2}> {/* Adjust margin top (mt) and margin left (ml) as needed */}
+    <Box mt={2} ml={2}>
       <Autocomplete
         freeSolo
         options={allCategories}
@@ -30,7 +35,7 @@ const SearchBar = ({ categories, onSearch }) => {
             label="Search Categories"
             variant="outlined"
             size="small"
-            style={{ width: 300 }} // Adjust width as needed
+            style={{ width: 300 }}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
                 handleSearch(event, params.inputProps.value);
